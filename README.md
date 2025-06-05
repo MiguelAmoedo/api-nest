@@ -17,21 +17,19 @@ API RESTful para gerenciamento de usuários com controle de acesso baseado em fu
 npm install
 ```
 
-2. Configure as variáveis de ambiente:
-```env
-DATABASE_URL=postgresql://user:password@localhost:5432/database
-JWT_SECRET=seu_jwt_secret
-FRONTEND_URL=http://localhost:3000
+2. Configure um banco de dados postgress:
 ```
-
-3. Execute as migrações:
-```bash
-npm run migration:run
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'root',
+      database: 'postgres',
 ```
 
 4. Inicie o servidor:
 ```bash
-npm run start:dev
+npm start
 ```
 
 A API estará disponível em `http://localhost:3001`
